@@ -1,0 +1,9 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export EDITOR=nano
+export PYTHONIOENCODING=utf-8
+export WORKON_HOME=/srv/environments
+export PROJECT_HOME=/srv/projects
+source /usr/local/bin/virtualenvwrapper.sh
+export PIP_VIRTUAL_ENV_BASE=$WORKON_HOME
