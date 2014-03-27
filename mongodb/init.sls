@@ -1,3 +1,4 @@
+# untested!!!
 mongodb-repo:
   pkgrepo.managed:
     - name: deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
