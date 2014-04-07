@@ -45,3 +45,35 @@ https://github.com/pwalsh/quilt
 And specifically, templates for configuring services here:
 
 https://github.com/pwalsh/quilt/tree/master/quilt/contrib/templates
+
+
+Workflow
+========
+
+Appserver
++++++++++
+
+Add a Django eKnight
+~~~~~~~~~~~~~~~~~~~~
+For every new eKnight that is ready for deployment, a new salt pillar will be
+created.
+
+* create a user named after the eKnight
+* clone the repo
+* create & install the virtualenv
+* update settings.py
+* create the required DBs
+* sync the dbs
+* load fixtures if needed
+* allocate a TCP port
+* create a process conf file (circus)
+* update the http server reverse proxy
+
+Update an eKnight
+~~~~~~~~~~~~~~~~~
+eKnights will be updated based on a given repository tag.
+
+* pull the code
+* install new requirments
+* update the DBs
+* refresh the server
