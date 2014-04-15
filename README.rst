@@ -17,8 +17,6 @@ created.
 * create & install the virtualenv
 * create a local_settings.py
 * create the required DBs
-* sync the dbs
-* load fixtures if needed
 * allocate a TCP port
 * create a process conf file (circus)
 * update the http server reverse proxy
@@ -29,7 +27,7 @@ eKnights will be updated based on a given repository ref/branch/tag.
 
 * pull the code
 * install new requirments
-* update the DBs
+* sync & migrate the DBs
 * copy static file
 * refresh the server
 
