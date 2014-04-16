@@ -1,23 +1,26 @@
 HaSadna Conductor
 -----------------
 
+This repository contains the salt stack states, pillar and code that 
+host Hasadna projects (aka eknights).
+
 Workflow
 ========
 
-Appserver
-+++++++++
+eknight server
+++++++++++++++
 
 Add a Django eKnight
 ~~~~~~~~~~~~~~~~~~~~
 For every new eKnight that is ready for deployment, a new salt pillar will be
-created.
+created with the eknight static data.
 
 * create a user named after the eKnight
 * clone the repo
 * create & install the virtualenv
 * create a local_settings.py
 * create the required DBs
-* allocate a TCP port
+* launch gunicron on the allocated TCP port
 * create a process conf file (circus)
 * update the http server reverse proxy
 
