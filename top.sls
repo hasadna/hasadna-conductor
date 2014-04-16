@@ -14,6 +14,8 @@ base:
   'conductor':
     - salt-master
     - machines.conductor
+  'eknight':
+    - eknight
   'openmuni-app.c.openmunibudgets.internal':
     - supervisor
     - nginx

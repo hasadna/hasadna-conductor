@@ -23,6 +23,6 @@ staticfiles:
   django.collectstatic:
     - settings_module: ~{{ pillar['username'] }}/local_settings.py
 
-refresh:
-  ????
+# Do we need to do anythng to refresh the gunicorn process?
+# refresh:
 

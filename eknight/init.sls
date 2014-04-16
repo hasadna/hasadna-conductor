@@ -13,7 +13,7 @@ app-pkgs:
   - user.present:
     - fullname: {{ pillar['fullname'] }}
 
-{{ pillar['reponame'] }}:
+repo:
   git.latest:
     - name: {{ pillar['git_repo'] }}
     - rev: {{ pillar['git_rev'] }}
@@ -25,10 +25,10 @@ app-pkgs:
 settings:
   file.managed:
     - name: ~{{ pillar['username'] }}/local_settings.py
-    - source: salt://settings/{{ pillar['projectname'] }}_settings.py
+    - source: salt://settings/{{ pillar['username'] }}_settings.py
     - template: jinja
     - watch:
-      - git: {{ pillar['reponame'] }}
+      - git: repo
 
 admin:
   django.createsuperuser:
